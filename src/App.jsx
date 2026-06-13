@@ -116,8 +116,8 @@ function Weather(){
       </div>      
       )}
       <p className="text-center mt-3 text-muted">
-  Built with React & OpenWeather API
-</p>
+      Built with React & OpenWeather API
+      </p>
     </div>
     
   );
