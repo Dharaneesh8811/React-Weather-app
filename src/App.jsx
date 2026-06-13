@@ -81,14 +81,18 @@ function Weather(){
         />
         <button className="btn btn-primary"
         onClick={getWeather}
-        >Search</button>
+        >Search 🔍</button>
       </div>
 
       { error && (
         <p className="text-danger text-center">{error}</p>
       )}
       { loading && (
-        <h3 className="text-center">Loading...</h3>
+        <div className="spinner-border" role="status">
+          <span className="visually-hidden">
+            Loading...
+          </span>
+        </div>
       )}
       
       { weather && (
@@ -111,8 +115,11 @@ function Weather(){
           <p>Feels Like: {weather.main.feels_like}°C</p>
       </div>      
       )}
-      
+      <p className="text-center mt-3 text-muted">
+  Built with React & OpenWeather API
+</p>
     </div>
+    
   );
 }
 
